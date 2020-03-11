@@ -1,5 +1,21 @@
 {
-	"annotation": {
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1')",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"anno": {
+		"prefix": "anno",
+		"body": [
+			"/* --------------------------------$1-------------------------------- */",
+			"/* --------------------------------$1 end-------------------------------- */"
+		],
+		"description": "自定义注释"
+	},
+	"method": {
 		"prefix": "method",
 		"body": [
 			"/* ----------------------------$1---------------------------- */",
@@ -11,14 +27,14 @@
 		"description": "创建函数"
 	},
 	"import utils": {
-		"prefix": "utils",
+		"prefix": "applet-utils",
 		"body": "import { toast, request$1 } from '../../utils/utils'",
-		"description": "引入utils"
+		"description": "小程序引入utils"
 	},
 	"get request": {
-		"prefix": "rqg",
+		"prefix": "rq",
 		"body": [
-			"request($1, $2).then(res => {",
+			"request($1, $2, $3).then(res => {",
 			"\tconsole.log(res)",
 			"\t$3",
 			"}).catch(err => {",
@@ -26,19 +42,6 @@
 			"\tconsole.log(err)",
 			"})"
 		],
-		"description": "get请求"
-	},
-	"post request": {
-		"prefix": "rqp",
-		"body": [
-			"request($1, 'POST', $2).then(res => {",
-			"\tconsole.log(res)",
-			"\t$3",
-			"}).catch(err => {",
-			"\ttoast('请求出错')",
-			"\tconsole.log(err)",
-			"})"
-		],
-		"description": "post请求"
+		"description": "小程序请求"
 	}
 }

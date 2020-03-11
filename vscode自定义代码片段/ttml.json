@@ -6,6 +6,6 @@
 			"\t<view class=\"$2\">$3</view>",
 			"</block>"
 		],
-		"description": "wx block"
+		"description": "block"
   }
 }
