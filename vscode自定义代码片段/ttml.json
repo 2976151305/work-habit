@@ -1,0 +1,11 @@
+{
+	"block": {
+		"prefix": "block",
+		"body": [
+			"<block tt:for=\"{{$1}}\" tt:key=\"index\">",
+			"\t<view class=\"$2\">$3</view>",
+			"</block>"
+		],
+		"description": "wx block"
+  }
+}
