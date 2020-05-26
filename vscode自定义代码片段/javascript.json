@@ -13,7 +13,7 @@
 	"import utils": {
 		"prefix": "mini-import-utils",
 		"body": "import { toast, request$1 } from '../../utils/utils'",
-		"description": "引入utils"
+		"description": "小程序引入utils"
 	},
 	"get request": {
 		"prefix": "mini-request",
