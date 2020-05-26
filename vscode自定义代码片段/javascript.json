@@ -1,6 +1,6 @@
 {
 	"annotation": {
-		"prefix": "method",
+		"prefix": "create-method",
 		"body": [
 			"/* ----------------------------$1---------------------------- */",
 			"$2() {",
@@ -8,37 +8,25 @@
 			"},",
 			"/* ----------------------------$1 end---------------------------- */"
 		],
-		"description": "创建函数"
+		"description": "函数"
 	},
 	"import utils": {
-		"prefix": "utils",
+		"prefix": "mini-import-utils",
 		"body": "import { toast, request$1 } from '../../utils/utils'",
 		"description": "引入utils"
 	},
 	"get request": {
-		"prefix": "rqg",
+		"prefix": "mini-request",
 		"body": [
 			"request($1, $2).then(res => {",
 			"\tconsole.log(res)",
-			"\t$3",
+			"\tconst { $3 } = res.data",
+			"\t$4",
 			"}).catch(err => {",
-			"\ttoast('请求出错')",
+			"\ttoast('操作错误')",
 			"\tconsole.log(err)",
 			"})"
 		],
-		"description": "get请求"
-	},
-	"post request": {
-		"prefix": "rqp",
-		"body": [
-			"request($1, 'POST', $2).then(res => {",
-			"\tconsole.log(res)",
-			"\t$3",
-			"}).catch(err => {",
-			"\ttoast('请求出错')",
-			"\tconsole.log(err)",
-			"})"
-		],
-		"description": "post请求"
+		"description": "请求"
 	}
 }
